@@ -1,0 +1,11 @@
+import React from 'react'
+import Avatar from '@mui/material/Avatar'
+import Button from '@mui/material/Button'
+import TextField from '@mui/material/TextField'
+import Box from '@mui/material/Box'
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
+import Typography from '@mui/material/Typography'
+import Container from '@mui/material/Container'
+import Paper from '@mui/material/Paper'
+import { useNavigate } from 'react-router-dom'
+export default function Login(){const nav=useNavigate();const submit=e=>{e.preventDefault();nav('/')};return(<Container maxWidth='sm'><Paper sx={{mt:8,p:4}} elevation={6}><Box sx={{display:'flex',flexDirection:'column',alignItems:'center'}}><Avatar sx={{m:1,bgcolor:'secondary.main'}}><LockOutlinedIcon/></Avatar><Typography component='h1' variant='h5'>Sign in</Typography><Box component='form' onSubmit={submit} sx={{mt:1,width:'100%'}}><TextField margin='normal' required fullWidth label='Email Address'/><TextField margin='normal' required fullWidth label='Password' type='password'/><Button type='submit' fullWidth variant='contained' sx={{mt:3,mb:2}}>Sign In</Button></Box></Box></Paper></Container>)}
